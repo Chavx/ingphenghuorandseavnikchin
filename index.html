@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="ពិធីមង្គលការ អ៊ឹង ផេងហួរ និង ជិន សៀវនិ 💍">
     <meta name="twitter:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍ អ៊ឹង ផេងហួរ និង ជិន សៀវនិ នៅថ្ងៃទី០៦ ខែធ្នូ ឆ្នាំ២០២៦ នៅភោជនីយដ្ឋាន ប៊ុនគឺមអ៊ិ៍ (តាឡាក់) ❤️">
     <meta name="twitter:image" content="https://ingphenghuorandseavnikchin.pages.dev/ingphenghuorandseavnikchin.jpg">
-    <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
+    
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('to');
@@ -53,22 +53,11 @@
     
     <style>
         :root {
-            --silver-1: #ffffff;
-            --silver-2: #e0f2fe;
-            --silver-3: #d4af37;
-            --silver-4: #b8860b;
-            --silver-5: #8a6508;
-            --silver-6: #fef08a;
-            --silver-7: #451a03;
-            --primary-gold: #d4af37;
-            --dark-gold: #8a6508;
-            --bg-dark: #0f172a;
-            --card-bg: rgba(15, 30, 54, 0.65);
-            --border-color: rgba(212, 175, 55, 0.48);
-            --text-light: #f0f9ff;
-            --text-gold: #fef08a;
-            --glow-gold: rgba(212, 175, 55, 0.35);
-            --text-formal: #fef08a; 
+            --custom-text: #735C00;
+            --bg-light: #EEE5D8;
+            --card-bg: rgba(253, 248, 242, 0.94);
+            --border-color: rgba(115, 92, 0, 0.4);
+            --glow-gold: rgba(115, 92, 0, 0.25);
         }
 
         * {
@@ -79,8 +68,8 @@
         }
 
         body {
-            background-color: #030712;
-            color: var(--text-light);
+            background-color: var(--bg-light);
+            color: var(--custom-text);
             font-family: 'Kantumruy Pro', sans-serif;
             display: flex;
             justify-content: center;
@@ -105,9 +94,9 @@
 
         .petal {
             position: absolute;
-            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            background: linear-gradient(135deg, #735C00, #a68500);
             border-radius: 15px 0 15px 0;
-            opacity: 0.75;
+            opacity: 0.65;
             pointer-events: none;
             animation: fall linear infinite;
         }
@@ -118,7 +107,7 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.8;
+                opacity: 0.7;
             }
             100% {
                 transform: translateY(105vh) rotate(360deg) scale(1.2);
@@ -137,7 +126,7 @@
             z-index: -2;
         }
 
-        /* Dark Overlay & Blur */
+        /* Overlay & Blur */
         body::before {
             content: '';
             position: fixed;
@@ -145,7 +134,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(8, 19, 36, 0.78);
+            background: rgba(238, 229, 216, 0.88);
             backdrop-filter: blur(4px);
             z-index: -1;
         }
@@ -160,14 +149,14 @@
             max-height: 864px !important;
             aspect-ratio: 9 / 16 !important;
             flex: 0 0 486px !important;
-            background: linear-gradient(180deg, rgba(20, 48, 77, 0.94), rgba(7, 23, 41, 0.95)), url('backgrund/IMG_1005.jpg');
+            background: linear-gradient(180deg, rgba(253, 248, 242, 0.96), rgba(245, 238, 228, 0.96)), url('backgrund/IMG_1005.jpg');
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-radius: 24px;
             padding: 2rem 1.2rem;
             text-align: center;
             position: relative;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 35px var(--glow-gold);
+            box-shadow: 0 20px 45px rgba(115, 92, 0, 0.15), 0 0 35px var(--glow-gold);
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -178,16 +167,8 @@
             background-clip: padding-box, border-box, border-box;
             background-origin: padding-box, border-box, border-box;
             background-image:
-                linear-gradient(180deg, rgba(23, 56, 89, 0.93) 0%, rgba(13, 37, 61, 0.94) 48%, rgba(6, 20, 36, 0.96) 100%),
-                linear-gradient(135deg,
-                    var(--silver-1) 0%,
-                    var(--silver-3) 14%,
-                    var(--silver-7) 28%,
-                    var(--silver-6) 40%,
-                    var(--silver-1) 52%,
-                    var(--silver-4) 66%,
-                    var(--silver-2) 82%,
-                    var(--silver-1) 100%),
+                linear-gradient(180deg, rgba(253, 248, 242, 0.96) 0%, rgba(245, 238, 228, 0.96) 48%, rgba(238, 229, 216, 0.98) 100%),
+                linear-gradient(135deg, #735C00 0%, #b89700 50%, #735C00 100%),
                 url('backgrund/IMG_1005.jpg');
         }
 
@@ -209,16 +190,15 @@
             position: absolute; 
             width: 40px; 
             height: 40px; 
-            border: 1px solid var(--primary-gold); 
+            border: 1px solid var(--custom-text); 
             pointer-events: none; 
-            opacity: 0.5; 
+            opacity: 0.6; 
             z-index: 5;
             top: 12px; 
             left: 12px; 
             border-right: none; 
             border-bottom: none;
-            border-color: var(--silver-2) !important;
-            box-shadow: 0 0 8px rgba(255,255,255,.22);
+            box-shadow: 0 0 8px rgba(115,92,10,.22);
         }
 
         @media (min-width: 900px) {
@@ -279,18 +259,18 @@
             gap: 9px !important;
             z-index: 70 !important;
             padding: 5px !important;
-            border: 1px solid rgba(212,175,55,.32) !important;
+            border: 1px solid rgba(115,92,0,.4) !important;
             border-radius: 18px !important;
-            background: rgba(12, 24, 42, .58) !important;
+            background: rgba(238, 229, 216, .9) !important;
             backdrop-filter: blur(10px) !important;
             -webkit-backdrop-filter: blur(10px) !important;
-            box-shadow: 0 5px 18px rgba(0,0,0,.28), inset 0 1px rgba(255,255,255,.08) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08) !important;
         }
 
         .icon-btn {
-            background: rgba(212, 175, 55, 0.18) !important; 
-            border: 1px solid #d4af37 !important; 
-            color: #fef08a !important; 
+            background: rgba(115, 92, 0, 0.15) !important; 
+            border: 1px solid #735C00 !important; 
+            color: #735C00 !important; 
             border-radius: 12px;
             padding: 0 11px;
             height: 36px;
@@ -311,7 +291,7 @@
             font-size: 1rem !important;
         }
         .music-btn.playing { animation: controlPulse 1.8s ease-in-out infinite !important; }
-        @keyframes controlPulse { 0%,100% { box-shadow: 0 3px 10px rgba(0,0,0,.22), 0 0 0 rgba(212,175,55,0); } 50% { box-shadow: 0 3px 14px rgba(0,0,0,.28), 0 0 13px rgba(212,175,55,.38); } }
+        @keyframes controlPulse { 0%,100% { box-shadow: 0 3px 10px rgba(0,0,0,.1), 0 0 0 rgba(115,92,0,0); } 50% { box-shadow: 0 3px 14px rgba(0,0,0,.15), 0 0 13px rgba(115,92,0,.38); } }
 
         /* Pages Management */
         .page {
@@ -329,7 +309,7 @@
         }
         
         #page1 {
-            background: linear-gradient(rgba(14, 38, 64, 0.8), rgba(6, 21, 38, 0.82)), url('backgrund/IMG_0987.jpg');
+            background: linear-gradient(rgba(238, 229, 216, 0.85), rgba(245, 238, 228, 0.9)), url('backgrund/IMG_0987.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -343,9 +323,9 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
         .page::-webkit-scrollbar { width: 4px; }
-        .page::-webkit-scrollbar-thumb { background: var(--primary-gold); border-radius: 4px; }
+        .page::-webkit-scrollbar-thumb { background: var(--custom-text); border-radius: 4px; }
 
-        /* Typography */
+        /* Typography - Set all text colors to #735C00 */
         .header-title,
         .formal-title,
         .guest-label,
@@ -357,21 +337,34 @@
         .section-title,
         .highlight-date-formal,
         .sub-title,
-        .wedding-date-front {
-            background: linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #fef08a 18%,
-                #d4af37 38%,
-                #ffeaa1 56%,
-                #b8860b 78%,
-                #fef08a 100%
-            ) !important;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            color: transparent !important;
-            text-shadow: 0 1px 8px rgba(212,175,55,0.3) !important;
+        .wedding-date-front,
+        .content-container-formal,
+        .parent-name,
+        .parents-name,
+        .father-name,
+        .mother-name,
+        .parent-info,
+        .parents-info,
+        .family-name,
+        .guest-name,
+        .invitation-intro,
+        .invitation-text,
+        .date-location-block-formal,
+        .event-name,
+        .scroll-hint,
+        .bio-side h3,
+        .bio-side p,
+        .currency-badge,
+        .account-owner,
+        .location-label-final,
+        .location-name-final,
+        .location-address-final,
+        #page5 .final-page-kicker,
+        #page5 .final-page-title,
+        #page5 .final-page-heading p,
+        #page5 .final-page-line {
+            color: #735C00 !important;
+            -webkit-text-fill-color: #735C00 !important;
         }
 
         .header-title { font-family: 'Moul', cursive; font-size: 1.3rem; margin-bottom: 0.3rem; line-height: 1.8; }
@@ -393,39 +386,40 @@
         .wax-seal-btn {
             width: 90px;
             height: 90px;
-            background: radial-gradient(circle, #ffffff 0%, #e2e8f0 28%, #94a3b8 55%, #475569 78%, #f8fafc 100%);
+            background: radial-gradient(circle, #ffffff 0%, #fde8e8 28%, #b89700 55%, #735C00 78%, #3d3000 100%);
             border-radius: 50%;
             border: 3px dashed #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(212,175,55,.45), inset 0 2px 5px rgba(255,255,255,.35) !important;
+            box-shadow: 0 0 25px rgba(115,92,0,.35), inset 0 2px 5px rgba(255,255,255,.35) !important;
             margin: 1.5rem 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
         .wax-seal-btn:hover {
             transform: scale(1.08);
-            box-shadow: 0 0 35px rgba(235, 235, 235, 0.9);
+            box-shadow: 0 0 35px rgba(115, 92, 0, 0.6);
         }
         .wax-seal-btn span {
             font-family: 'Moul', cursive;
             font-size: 1.8rem;
-            color: #1e293b;
-            text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
         }
 
         .envelope-instruction {
             font-size: 0.85rem;
-            color: var(--text-gold);
+            color: #735C00;
             margin-top: 0.5rem;
             letter-spacing: 0.5px;
+            font-weight: 600;
             animation: pulse-text 1.5s infinite;
         }
         @keyframes pulse-text { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
 
-        .couple-names-front { font-family: 'Moul', cursive; font-size: 1.2rem; color: #ffffff; margin: 0.8rem 0; line-height: 1.8; text-shadow: 0 0 15px rgba(220, 220, 220, 0.4); }
+        .couple-names-front { font-family: 'Moul', cursive; font-size: 1.2rem; color: #735C00; margin: 0.8rem 0; line-height: 1.8; }
         .couple-names-front span { display: block; font-family: 'Playfair Display', serif; font-size: 0.95rem; font-style: italic; margin-top: 0.2rem; }
 
         .guest-invitation-container {
@@ -441,42 +435,43 @@
             margin-bottom: 0.4rem;
         }
         .guest-name-box {
-            background: linear-gradient(135deg, #fef08a, #b8860b, #fef08a);
+            background: linear-gradient(135deg, #735C00, #b89700, #735C00);
             border-radius: 50px;
             padding: 3px;
             width: 100%;
             max-width: 300px;
-            box-shadow: 0 0 15px rgba(220, 220, 220, 0.4);
+            box-shadow: 0 4px 15px rgba(115, 92, 0, 0.15);
         }
         .guest-name-inner {
-            background: rgba(11, 29, 51, 0.95) !important;
+            background: rgba(253, 248, 242, 0.95) !important;
             border-radius: 50px;
             padding: 0.5rem 1rem;
-            color: #fef08a !important;
+            color: #735C00 !important;
+            -webkit-text-fill-color: #735C00 !important;
             font-size: 0.9rem;
             font-weight: 700;
             text-align: center;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            border: 1px solid rgba(212,175,55,.4);
+            border: 1px solid rgba(115,92,0,.3);
         }
         .wedding-date-front {
             font-size: 0.78rem;
-            color: #fef08a !important;
             margin-top: 0.6rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         /* Buttons */
         .btn-group { display: flex; gap: 10px; margin-top: auto; padding-top: 1rem; flex-shrink: 0; width: 100%; position: relative; z-index: 25; }
         .btn {
-            background: linear-gradient(135deg, #1e3a5f, #0f253d) !important; 
-            color: #fef08a !important; 
+            background: linear-gradient(135deg, #735C00, #4d3d00) !important; 
+            color: #ffffff !important; 
+            -webkit-text-fill-color: #ffffff !important;
             font-weight: 600; 
             padding: 0.75rem 1rem; 
-            border: 1px solid #d4af37 !important; 
+            border: 1px solid #735C00 !important; 
             border-radius: 12px; 
             font-size: 0.85rem; 
             cursor: pointer; 
@@ -487,9 +482,9 @@
             gap: 0.5rem; 
             transition: all 0.3s ease; 
             width: 100%;
-            box-shadow: 0 0 12px rgba(212,175,55,.2);
+            box-shadow: 0 4px 12px rgba(115, 92, 0, 0.2);
         }
-        .btn-secondary { background: rgba(212,175,55,.12) !important; border: 1px solid #d4af37 !important; color: #fef08a !important; }
+        .btn-secondary { background: rgba(115, 92, 0, 0.15) !important; border: 1px solid #735C00 !important; color: #735C00 !important; -webkit-text-fill-color: #735C00 !important; }
         .btn:hover { transform: translateY(-2px); }
 
         /* Butterflies */
@@ -561,7 +556,7 @@
             94% { opacity: var(--opacity); }
             100% {
                 transform: translate3d(var(--x6), var(--y6), 0)
-                           rotate(var(--r6)) scale(var(--scale));
+                           rotate(var(--r6)) scale(calc(var(--scale) * .97));
                 opacity: 0;
             }
         }
@@ -584,38 +579,14 @@
         }
 
         /* Page 2 Details */
-        .content-container-formal { font-size: 0.82rem; color: var(--text-light); line-height: 1.8; text-align: center; width: 100%; position: relative; z-index: 10; }
+        .content-container-formal { font-size: 0.82rem; line-height: 1.8; text-align: center; width: 100%; position: relative; z-index: 10; }
         .formal-title { font-family: 'Moul', cursive; font-size: 1.05rem; margin-bottom: 0.8rem; }
         .parents-block, .couple-names-block-formal { display: flex; justify-content: space-between; margin-bottom: 1rem; }
         .parents-side, .couple-side-formal { width: 48%; }
         
-        .parent-name,
-        .parents-name,
-        .father-name,
-        .mother-name,
-        .parent-info,
-        .parents-info,
-        .family-name,
-        .guest-name {
-            background: linear-gradient(
-                90deg,
-                #ffffff 0%,
-                #fef08a 22%,
-                #ffeaa1 45%,
-                #d4af37 70%,
-                #ffffff 100%
-            ) !important;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            color: transparent !important;
-            text-shadow: 0 0 8px rgba(212,175,55,.25) !important;
-            font-weight: bold;
-        }
-
-        .invitation-intro { text-decoration: underline; color: var(--text-gold); margin-bottom: 0.5rem; }
-        .invitation-text { color: #f0f9ff !important; margin-bottom: 1rem; text-align: center; font-size: 0.8rem; line-height: 1.85 !important; }
-        .date-location-block-formal { text-align: center; color: #f0f9ff !important; margin-bottom: 1.2rem; line-height: 1.9 !important; }
+        .invitation-intro { text-decoration: underline; font-weight: 600; margin-bottom: 0.5rem; }
+        .invitation-text { font-weight: 500; margin-bottom: 1rem; text-align: center; font-size: 0.8rem; line-height: 1.85 !important; }
+        .date-location-block-formal { text-align: center; font-weight: 500; margin-bottom: 1.2rem; line-height: 1.9 !important; }
         .date-location-block-formal p { margin: 0; line-height: 1.9 !important; }
         .highlight-date-formal { line-height: 1.9 !important; font-weight: bold; }
         .wedding-date-front { line-height: 1.9 !important; }
@@ -639,12 +610,6 @@
             font-family: 'Moul', cursive;
             font-size: 0.72rem;
             line-height: 1.5;
-            background: linear-gradient(180deg, #ffffff 0%, #fef08a 35%, #d4af37 70%, #b8860b 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            text-shadow: 0 0 6px rgba(212,175,55,.2);
         }
 
         .couple-side-formal { text-align: center; }
@@ -663,11 +628,8 @@
             background: linear-gradient(
                 90deg,
                 transparent,
-                #b8860b,
-                #fef08a,
-                #d4af37,
-                #fef08a,
-                #b8860b,
+                #735C00,
+                #735C00,
                 transparent
             ) !important;
         }
@@ -675,8 +637,8 @@
         .program-day-title {
             font-family: 'Kantumruy Pro', sans-serif;
             font-weight: 700;
-            background: rgba(15, 42, 74, 0.45);
-            border-left: 3px solid #d4af37 !important;
+            background: rgba(115, 92, 0, 0.15);
+            border-left: 3px solid #735C00 !important;
             padding: 0.4rem 0.8rem;
             text-align: left;
             margin: 1rem 0 0.8rem;
@@ -688,7 +650,7 @@
             position: relative;
             padding-left: 1rem;
             text-align: left;
-            border-left: 2px dashed rgba(224, 242, 254, 0.35);
+            border-left: 2px dashed rgba(115, 92, 0, 0.35);
             margin-left: 0.5rem;
         }
 
@@ -714,8 +676,8 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--primary-gold);
-            box-shadow: 0 0 8px var(--primary-gold);
+            background: #735C00;
+            box-shadow: 0 0 8px rgba(115, 92, 0, 0.4);
         }
 
         .time-badge {
@@ -726,13 +688,13 @@
         }
 
         .event-name {
-            color: #f0f9ff !important;
+            font-weight: 600;
             font-size: 0.8rem;
         }
 
         .scroll-hint {
-            color: #fef08a !important;
             font-size: 0.75rem;
+            font-weight: 600;
             margin-top: 0.5rem;
             animation: bounce 1.5s infinite;
             display: flex;
@@ -743,25 +705,25 @@
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
 
         /* Page 3 */
-        .photo-frame { width: 100%; height: 260px; border: 2px solid #d4af37 !important; border-radius: 16px; overflow: hidden; margin-bottom: 1rem; box-shadow: 0 0 15px var(--glow-gold); }
+        .photo-frame { width: 100%; height: 260px; border: 2px solid #735C00 !important; border-radius: 16px; overflow: hidden; margin-bottom: 1rem; box-shadow: 0 0 15px var(--glow-gold); }
         .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
         .couple-bio-block { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
-        .bio-side { width: 48%; background: var(--card-bg); border: 1px solid rgba(212,175,55,.38) !important; border-radius: 12px; padding: 0.8rem; text-align: center; }
-        .bio-side img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid #d4af37 !important; object-fit: cover; margin-bottom: 0.5rem; }
-        .bio-side h3 { font-family: 'Moul', cursive; font-size: 0.8rem; font-weight: normal; margin-bottom: 0.3rem; color: #fef08a !important; }
-        .bio-side p { font-size: 0.75rem; color: #e0f2fe !important; }
+        .bio-side { width: 48%; background: rgba(253, 248, 242, 0.95); border: 1px solid rgba(115,92,0,.35) !important; border-radius: 12px; padding: 0.8rem; text-align: center; }
+        .bio-side img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid #735C00 !important; object-fit: cover; margin-bottom: 0.5rem; }
+        .bio-side h3 { font-family: 'Moul', cursive; font-size: 0.8rem; font-weight: normal; margin-bottom: 0.3rem; }
+        .bio-side p { font-size: 0.75rem; font-weight: 600; }
 
         /* Page 5 Dynamic Section Box & Gift QR Styles */
-        .section-box { background: rgba(15, 30, 54, 0.65); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.8rem; margin-bottom: 0.8rem; text-align: center; }
+        .section-box { background: rgba(253, 248, 242, 0.95); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.8rem; margin-bottom: 0.8rem; text-align: center; }
         .section-title { font-family: 'Moul', cursive; font-size: 0.82rem; margin-bottom: 0.5rem; font-weight: normal; }
 
         .blessing-card {
-            background: linear-gradient(145deg, rgba(20, 48, 77, 0.85), rgba(7, 23, 41, 0.85));
-            border: 1px solid rgba(212, 175, 55, 0.55);
+            background: linear-gradient(145deg, rgba(253, 248, 242, 0.96), rgba(245, 238, 228, 0.96));
+            border: 1px solid rgba(115, 92, 0, 0.45);
             border-radius: 18px;
             padding: 1rem 0.8rem;
             margin-bottom: 1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06), inset 0 1px rgba(255, 255, 255, 0.8);
         }
 
         /* Large Single-Column QR Layout for High Legibility & ABA Card Display */
@@ -774,8 +736,8 @@
         }
 
         .qr-item {
-            background: rgba(11, 29, 51, 0.9);
-            border: 1px solid rgba(212, 175, 55, 0.5);
+            background: rgba(253, 248, 242, 0.96);
+            border: 1px solid rgba(115, 92, 0, 0.4);
             border-radius: 16px;
             padding: 0.8rem;
             display: flex;
@@ -783,14 +745,14 @@
             align-items: center;
             width: 100%;
             max-width: 320px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .qr-item:hover {
             transform: translateY(-3px);
-            border-color: #d4af37;
-            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.25);
+            border-color: #735C00;
+            box-shadow: 0 10px 20px rgba(115, 92, 0, 0.2);
         }
 
         .qr-img-wrap {
@@ -799,7 +761,7 @@
             background: #ffffff;
             border-radius: 12px;
             padding: 6px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             overflow: hidden;
             position: relative;
@@ -817,7 +779,6 @@
             margin-top: 0.6rem;
             font-size: 0.85rem;
             font-weight: 700;
-            color: #fef08a;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -825,7 +786,6 @@
 
         .account-owner {
             font-size: 0.75rem;
-            color: #e0f2fe;
             margin-top: 0.2rem;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -836,7 +796,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(3, 7, 18, 0.88);
+            background: rgba(115, 92, 0, 0.3);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             z-index: 1000;
@@ -851,14 +811,14 @@
         }
 
         .qr-modal-content {
-            background: linear-gradient(180deg, #132742, #081526);
-            border: 2px solid #d4af37;
+            background: linear-gradient(180deg, #fdf8f2, #f5eee4);
+            border: 2px solid #735C00;
             border-radius: 20px;
             padding: 1.2rem;
             max-width: 360px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(115, 92, 0, 0.25);
             position: relative;
         }
 
@@ -867,7 +827,7 @@
             border-radius: 12px;
             background: #ffffff;
             padding: 6px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             margin: 0.8rem 0;
         }
 
@@ -875,9 +835,9 @@
             position: absolute;
             top: 10px;
             right: 12px;
-            background: rgba(212, 175, 55, 0.2);
-            border: 1px solid #d4af37;
-            color: #fef08a;
+            background: rgba(115, 92, 0, 0.2);
+            border: 1px solid #735C00;
+            color: #735C00;
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -896,15 +856,7 @@
             min-height: 82px;
             display: block;
             margin: 0 auto 1rem;
-            background: linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #fef08a 15%,
-                #d4af37 35%,
-                #ffeaa1 50%,
-                #b8860b 70%,
-                #fef08a 100%
-            ) !important;
+            background: #735C00 !important;
             -webkit-mask-image: url('backgrund/logo.png');
             mask-image: url('backgrund/logo.png');
             -webkit-mask-repeat: no-repeat;
@@ -914,9 +866,8 @@
             -webkit-mask-size: contain;
             mask-size: contain;
             filter:
-                drop-shadow(0 0 3px rgba(255,255,255,.95))
-                drop-shadow(0 0 9px rgba(212,175,55,.62))
-                drop-shadow(0 0 18px rgba(255,240,138,.3)) !important;
+                drop-shadow(0 0 2px rgba(115,92,0,.6))
+                drop-shadow(0 0 8px rgba(115,92,0,.3)) !important;
             animation: logoFloat 4s ease-in-out infinite;
         }
 
@@ -928,7 +879,7 @@
                 115deg,
                 transparent 20%,
                 rgba(255,255,255,0) 34%,
-                rgba(255,255,255,.95) 45%,
+                rgba(255,255,255,.85) 45%,
                 rgba(255,255,255,0) 56%,
                 transparent 76%
             ) !important;
@@ -975,9 +926,9 @@
             margin: 0 0 14px;
             padding: 10px 8px;
             border-radius: 14px;
-            background: linear-gradient(135deg, rgba(20, 48, 77, 0.85), rgba(7, 23, 41, 0.82));
-            border: 1px solid rgba(255,255,255,.18);
-            box-shadow: inset 0 1px rgba(255,255,255,.12), 0 8px 22px rgba(0,0,0,.25);
+            background: linear-gradient(135deg, rgba(253, 248, 242, 0.95), rgba(245, 238, 228, 0.95));
+            border: 1px solid rgba(115,92,0,.35);
+            box-shadow: inset 0 1px rgba(255,255,255,.8), 0 6px 18px rgba(0,0,0,.06);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
@@ -985,16 +936,12 @@
             margin: 0;
             font-family: 'Moul', cursive;
             font-size: 1rem;
-            background: linear-gradient(180deg,#ffffff 0%,#fef08a 20%,#d4af37 45%,#b8860b 75%,#fef08a 100%) !important;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
         }
         .gallery-heading p {
             margin: 5px 0 0;
             font-size: .72rem;
-            color: #fef08a !important;
-            opacity: .82;
+            opacity: .88;
+            font-weight: 500;
         }
 
         .memory-hero {
@@ -1021,9 +968,9 @@
             padding: 0;
             border-radius: 18px;
             overflow: hidden;
-            background: #05070d;
-            border: 1px solid rgba(255,255,255,.22);
-            box-shadow: 0 14px 30px rgba(0,0,0,.42), 0 0 20px rgba(255,255,255,.08);
+            background: #f5eee4;
+            border: 1px solid rgba(115,92,0,.35);
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
             scroll-snap-align: start;
             opacity: 0;
             transform: translateY(28px) scale(.985);
@@ -1053,9 +1000,9 @@
 
         .gallery-tip {
             text-align: center;
-            color: #fef08a !important;
             font-size: .7rem;
-            opacity: .78;
+            font-weight: 600;
+            opacity: .85;
             padding: 4px 8px 10px;
             margin: 0;
         }
@@ -1081,7 +1028,7 @@
             font-family: 'Playfair Display', serif;
             font-size: .62rem;
             letter-spacing: 3px;
-            color: #fef08a;
+            font-weight: 600;
             opacity: .9;
             margin-bottom: .18rem;
         }
@@ -1090,11 +1037,6 @@
             font-family: 'Moul', cursive;
             font-size: 1.15rem;
             line-height: 1.7;
-            background: linear-gradient(180deg,#ffffff 0%,#fef08a 25%,#d4af37 55%,#b8860b 80%,#fef08a 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 12px rgba(212,175,55,.2);
         }
 
         #page5 .final-page-line {
@@ -1103,7 +1045,6 @@
             justify-content: center;
             gap: 7px;
             margin: .2rem auto .35rem;
-            color: #fef08a;
             font-size: .65rem;
         }
 
@@ -1112,12 +1053,12 @@
             content: "";
             width: 62px;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #d4af37, #fef08a, transparent);
+            background: linear-gradient(90deg, transparent, #735C00, transparent);
         }
 
         #page5 .final-page-heading p {
-            color: #e0f2fe;
             font-size: .68rem;
+            font-weight: 500;
             line-height: 1.65;
             margin: 0 auto;
             max-width: 310px;
@@ -1125,11 +1066,11 @@
 
         #page5 .location-card-final {
             position: relative;
-            background: linear-gradient(145deg, rgba(20, 48, 77, 0.85), rgba(7, 23, 41, 0.82));
-            border: 1px solid rgba(212,175,55,.55);
+            background: linear-gradient(145deg, rgba(253, 248, 242, 0.95), rgba(245, 238, 228, 0.95));
+            border: 1px solid rgba(115,92,0,.45);
             border-radius: 18px;
             padding: 8px;
-            box-shadow: 0 14px 32px rgba(0,0,0,.38), inset 0 1px rgba(255,255,255,.12), 0 0 22px rgba(212,175,55,.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,.06), inset 0 1px rgba(255,255,255,.8);
             margin-bottom: 12px;
         }
 
@@ -1138,8 +1079,8 @@
             height: 205px;
             border-radius: 13px;
             overflow: hidden;
-            background: #0c1c2e;
-            border: 1px solid rgba(255,255,255,.18);
+            background: #f5eee4;
+            border: 1px solid rgba(115,92,0,.3);
         }
 
         #page5 .location-map-iframe {
@@ -1147,7 +1088,7 @@
             height: 100%;
             display: block;
             border: 0;
-            filter: saturate(.82) contrast(1.02);
+            filter: saturate(.88) contrast(1.02);
         }
 
         #page5 .map-badge {
@@ -1157,10 +1098,10 @@
             z-index: 2;
             padding: 5px 9px;
             border-radius: 20px;
-            background: rgba(10,12,18,.72);
-            border: 1px solid rgba(255,255,255,.28);
-            color: #fef08a;
+            background: rgba(253,248,242,.9);
+            border: 1px solid rgba(115,92,0,.4);
             font-size: .63rem;
+            font-weight: 600;
             backdrop-filter: blur(7px);
         }
 
@@ -1179,10 +1120,10 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: linear-gradient(145deg,#ffffff,#d4af37,#8a6508);
-            color: #0f172a;
+            background: linear-gradient(145deg,#735C00,#b89700,#735C00);
+            color: #ffffff;
             font-size: 1.05rem;
-            box-shadow: 0 0 14px rgba(212,175,55,.25);
+            box-shadow: 0 0 14px rgba(115,92,0,.3);
         }
 
         #page5 .location-text-final {
@@ -1192,19 +1133,17 @@
 
         #page5 .location-label-final {
             font-size: .62rem;
-            color: #d4af37;
             margin-bottom: 1px;
+            font-weight: 600;
         }
 
         #page5 .location-name-final {
-            color: #fef08a;
             font-family: 'Moul', cursive;
             font-size: .78rem;
             line-height: 1.6;
         }
 
         #page5 .location-address-final {
-            color: #e0f2fe;
             font-size: .67rem;
             line-height: 1.5;
         }
@@ -1220,17 +1159,18 @@
             margin-top: 4px;
             border-radius: 14px;
             text-decoration: none;
-            color: #0f172a !important;
-            background: linear-gradient(135deg, #ffffff 0%, #fef08a 45%, #c49a18 100%);
-            border: 1px solid rgba(255,255,255,.7);
-            box-shadow: 0 8px 18px rgba(0,0,0,.26), 0 0 0 1px rgba(212,175,55,.22), inset 0 1px 0 rgba(255,255,255,.75), inset 0 -1px 0 rgba(96,68,4,.18);
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            background: linear-gradient(135deg, #735C00 0%, #4d3d00 100%);
+            border: 1px solid rgba(115,92,0,.6);
+            box-shadow: 0 6px 16px rgba(115,92,0,.2);
             transition: transform .22s ease, filter .22s ease, box-shadow .22s ease;
         }
 
         #page5 .location-map-btn-final:hover {
             transform: translateY(-2px);
-            filter: brightness(1.04);
-            box-shadow: 0 11px 22px rgba(0,0,0,.30), 0 0 18px rgba(212,175,55,.25), inset 0 1px 0 rgba(255,255,255,.8);
+            filter: brightness(1.06);
+            box-shadow: 0 10px 20px rgba(115,92,0,.3);
         }
 
         #page5 .map-btn-icon {
@@ -1241,10 +1181,9 @@
             align-items: center;
             justify-content: center;
             border-radius: 11px;
-            background: rgba(255,255,255,.36);
-            border: 1px solid rgba(255,255,255,.55);
+            background: rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.3);
             font-size: 1.15rem;
-            box-shadow: inset 0 1px 3px rgba(255,255,255,.45);
         }
 
         #page5 .location-map-btn-final > span:nth-child(2) {
@@ -1260,8 +1199,8 @@
             font-size: .86rem;
             font-weight: 800;
             line-height: 1.35;
-            letter-spacing: .05px;
-            color: #0f172a !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
         }
 
         #page5 .location-map-btn-final small {
@@ -1271,7 +1210,8 @@
             font-size: .66rem;
             font-weight: 500;
             line-height: 1.45;
-            color: rgba(15, 23, 42, 0.8) !important;
+            color: rgba(255, 255, 255, 0.88) !important;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
         }
 
         #page5 .map-btn-arrow {
@@ -1282,9 +1222,10 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: rgba(255,255,255,.24);
-            border: 1px solid rgba(255,255,255,.38);
-            color: #0f172a !important;
+            background: rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.3);
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             font-family: Arial, sans-serif;
             font-size: 1.25rem;
             line-height: 1;
@@ -1321,7 +1262,6 @@
                 <div class="page1-logo-frame">
                     <div class="page1-logo" role="img" aria-label="Wedding Logo"></div>
                 </div>
-
 
                 <!-- Guest Badge -->
                 <div class="guest-invitation-container">
@@ -1384,7 +1324,7 @@
                         <span class="date-line">ត្រូវនឹងថ្ងៃ ១២ កើត ខែរក្ទិក ឆ្នាំម្សាញ់ ពុទ្ធសករាជ ២៥៧០</span>
                         <span class="date-line">វេលាម៉ោង ០៦:០០ ល្ងាច</span>
                         <span>ស្ថិតនៅ </span>
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=%E1%9E%97%E1%9F%84%E1%9E%87%E1%9E%93%E1%9E%B8%E1%9E%99%E1%9E%8A%E1%9F%92%E1%9E%8B%E1%9E%B6%E1%9E%93+%E1%9E%94%E1%9F%8A%E1%9E%BB%E1%9E%93%E1%9E%82%E1%9E%BA%E1%9E%98%E1%9E%A2%E1%9F%8A%E1%9E%B7%E1%9F%8D+%28%E1%9E%8F%E1%9E%B6%E1%9E%A1%E1%9E%B6%E1%9E%80%E1%9F%8B%29%2C+Cambodia" target="_blank" rel="noopener" style="color: var(--primary-gold); text-decoration: underline;">ភោជនីយដ្ឋាន ប៊ុនគឺមអ៊ិ៍ (តាឡាក់)</a>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=%E1%9E%97%E1%9F%84%E1%9E%87%E1%9E%93%E1%9E%B8%E1%9E%99%E1%9E%8A%E1%9F%92%E1%9E%8B%E1%9E%B6%E1%9E%93+%E1%9E%94%E1%9F%8A%E1%9E%BB%E1%9E%93%E1%9E%82%E1%9E%BA%E1%9E%98%E1%9E%A2%E1%9F%8A%E1%9E%B7%E1%9F%8D+%28%E1%9E%8F%E1%9E%B6%E1%9E%A1%E1%9E%B6%E1%9E%80%E1%9F%8B%29%2C+Cambodia" target="_blank" rel="noopener" style="color: #735C00; text-decoration: underline; font-weight: bold;">ភោជនីយដ្ឋាន ប៊ុនគឺមអ៊ិ៍ (តាឡាក់)</a>
                     </p>
                 </div>
 
@@ -1433,7 +1373,7 @@
                         <div class="event-name">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time-badge">ម៉ោង ០៨:៣០ ព្រឹក</div>
+                        <div class="time-badge">ម៉ោង ០۸:៣០ ព្រឹក</div>
                         <div class="event-name">ពិធីពាក់ចិញ្ចៀន</div>
                     </div>
                     <div class="timeline-item">
@@ -1454,7 +1394,7 @@
                     </div>
                 </div>
 
-                <p style="margin-top: 1.5rem; color: var(--text-gold); font-size: 0.8rem;">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 0.8rem;">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
             </div>
 
             <div class="btn-group">
@@ -1495,14 +1435,11 @@
 
             <div class="memory-hero">
                 <div class="slider-wrapper" id="slider">
-                   <!-- <div class="slide"><img src="backgrund/NZ8_5761.jpg" alt="Photo 1"></div>-->
                     <div class="slide"><img src="backgrund/IMG_1009.jpg" alt="Photo 2"></div>
                     <div class="slide"><img src="backgrund/IMG_1005.jpg" alt="Photo 3"></div>
                     <div class="slide"><img src="backgrund/NAK_0351.jpg" alt="Photo 4"></div>
                     <div class="slide"><img src="backgrund/IMG_0987.jpg" alt="Photo 5"></div>
-                    <!--<div class="slide"><img src="backgrund/NZ8_4443.jpg" alt="Photo 6"></div>-->
                     <div class="slide"><img src="backgrund/IMG_1009.jpg" alt="Photo 2"></div>
-                  <!--  <div class="slide"><img src="backgrund/NZ7_8257.jpg" alt="Photo 7"></div>-->
                 </div>
             </div>
             <div class="gallery-tip">អូសចុះក្រោមដើម្បីមើលរូបភាពបន្ថែម</div>
@@ -1559,26 +1496,24 @@
             <div class="section-box">
                 <div class="section-title">📅 កាលបរិច្ឆេទកម្មវិធីសិរីមង្គល</div>
                 <div style="padding: 0.8rem 0; text-align: center;">
-                    <div style="font-family: 'Moul', cursive; font-size: 0.9rem; color: var(--primary-gold); margin-bottom: 0.4rem;">
+                    <div style="font-family: 'Moul', cursive; font-size: 0.9rem; margin-bottom: 0.4rem;">
                         <span>ថ្ងៃអាទិត្យ ទី០៦ ខែធ្នូ ឆ្នាំ២០២៦</span>
                     </div>
-                    <div style="font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--text-gold); font-weight: bold;">
+                    <div style="font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: bold;">
                        <span>វេលាម៉ោង ០៦:០០ ល្ងាច<div>ភោជនីយដ្ឋាន ប៊ុនគឺមអ៊ិ៍ (តាឡាក់)</div></span>
                     </div>
                 </div>
             </div>
 
-            
-
             <div class="section-box" style="text-align: left; padding: 10px 15px;">
                 <div class="section-title" style="text-align: center; margin-bottom: 8px;">🏢 ព័ត៌មានទំនាក់ទំនងក្រុមហ៊ុន</div>
-                <div style="font-size: 0.78rem; color: var(--text-light); line-height: 1.6;">
+                <div style="font-size: 0.78rem; line-height: 1.6; font-weight: 500;">
                     <p style="margin-bottom: 4px;">📌 <strong>ឈ្មោះ៖</strong> លីម៉ី បោះពុម្ព និងឌីសាញ (LYMEY Printing)</p>
                     <p style="margin-bottom: 4px;">📞 <strong>ទូរស័ព្ទ៖</strong> 092 888 808</p>
                     <p style="margin-bottom: 4px;">📍 <strong>ទីតាំង៖</strong> <span>រាជធានីភ្នំពេញ</span></p>
                     <p style="margin-bottom: 6px;">🌐 <strong>ហ្វេសប៊ុក៖</strong> LYMEY Printing</p>
                     <div style="text-align: center; margin-top: 8px;">
-                        <a href="https://t.me/lymeybrand" target="_blank" style="display: inline-block; background: var(--primary-gold); color: #000; padding: 6px 12px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.75rem;">
+                        <a href="https://t.me/lymeybrand" target="_blank" style="display: inline-block; background: #735C00; color: #ffffff; padding: 6px 12px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.75rem;">
                             <span>👉 ចូលរួមក្នុងក្រុមដើម្បីមើលម៉ូតធៀបថ្មីៗ</span>
                         </a>
                     </div>
